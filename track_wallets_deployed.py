@@ -40,7 +40,7 @@ class TrackingWalletDeploymentsProcessor(GenericProcessorSnapshot):
         txs_hset = await redis_conn.hgetall(epoch_txs_htable(epoch.epochId))
         all_txs = {k.decode(): EthTransactionReceipt.parse_raw(v) for k, v in txs_hset.items()}
 
-        contract_address = '0xeB1787995535081A5F17a5C7F320614b92BeFf39'
+        contract_address = '0xB88E8f9d0BD4D6771eda5EC37Cb2993cf9181e9D'
         contract_txs = list(
             map(
                 lambda x: x.dict(), filter(
