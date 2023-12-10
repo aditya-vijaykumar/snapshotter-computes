@@ -15,7 +15,7 @@ from snapshotter.utils.redis.redis_keys import epoch_txs_htable
 from snapshotter.utils.rpc import RpcHelper
 
 
-class TrackingWalletInteractionProcessor(GenericProcessorSnapshot):
+class TrackingWalletDeploymentsProcessor(GenericProcessorSnapshot):
     transformation_lambdas = None
 
     def __init__(self) -> None:
